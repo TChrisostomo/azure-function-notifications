@@ -56,7 +56,8 @@ public class HttpTriggerJava {
                 ServiceBusMessage message = new ServiceBusMessage(json);
 
                 message.getApplicationProperties().put(Constants.NOTIFICATION_TYPE, moodleNotificationDto.getNotificationtype());
-//                message.setSubject(moodleNotificationDto.getNotificationtype());
+
+                //                message.setSubject(moodleNotificationDto.getNotificationtype());
 
                 serviceBusSenderClient.sendMessage(message);
             } catch (Exception e) {
