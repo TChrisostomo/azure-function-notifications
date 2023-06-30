@@ -2,6 +2,8 @@
   "IsEncrypted": false,
   "Values": {
     "AzureWebJobsStorage": "",
-    "FUNCTIONS_WORKER_RUNTIME": "java"
+    "ServiceBusNamespace" : "",
+    "FUNCTIONS_WORKER_RUNTIME": "java",
+    "JAVA_HOME": "C:/Program Files/Java/jdk-17"
   }
 }

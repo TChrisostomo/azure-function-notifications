@@ -4,7 +4,7 @@
 
     <groupId>com.leonardo.notifications</groupId>
     <artifactId>azure-function-notifications</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
 
     <name>Azure Java Functions</name>
@@ -28,6 +28,29 @@
             <artifactId>azure-messaging-servicebus</artifactId>
             <version>7.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-core-http-netty</artifactId>
+            <version>1.13.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-core</artifactId>
+            <version>1.40.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-identity</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.azure.resourcemanager</groupId>-->
+<!--            <artifactId>azure-resourcemanager-msi</artifactId>-->
+<!--            <version>2.28.0</version>-->
+<!--        </dependency>-->
 
         <!-- Test -->
         <dependency>
