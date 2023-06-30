@@ -1,4 +1,4 @@
-package org.leonardo.models;
+package org.leonardo.models.dto;
 
 public class MoodleNotificationDto {
 
