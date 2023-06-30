@@ -82,7 +82,6 @@ public class NotificationFunction {
 
                         } catch (Exception e) {
                             e.printStackTrace();
-                            return Mono.just(request.createResponseBuilder(HttpStatus.INTERNAL_SERVER_ERROR).body(AzureFunctionResponsesEnum.ERROR_CONVERTING_BODY).build());
                         }
                     }
                     return serviceBusSenderClient.sendMessages(batch);

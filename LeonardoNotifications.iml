@@ -11,10 +11,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.microsoft.azure.functions:azure-functions-java-library:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.microsoft.azure.functions:azure-functions-java-core-library:1.2.0" level="project" />
-    <orderEntry type="library" name="Maven: com.azure:azure-messaging-servicebus:7.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.azure:azure-core-amqp:2.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.azure:qpid-proton-j-extensions:1.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.qpid:proton-j:0.33.4" level="project" />
+    <orderEntry type="library" name="Maven: com.azure:azure-messaging-servicebus:7.13.3" level="project" />
+    <orderEntry type="library" name="Maven: com.azure:azure-core-amqp:2.8.3" level="project" />
+    <orderEntry type="library" name="Maven: com.microsoft.azure:qpid-proton-j-extensions:1.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.qpid:proton-j:0.33.8" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.5" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.woodstox:stax2-api:4.2.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.woodstox:woodstox-core:6.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.azure:azure-core-http-netty:1.13.4" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.91.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.91.Final" level="project" />
