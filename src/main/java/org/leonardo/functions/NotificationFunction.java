@@ -85,7 +85,8 @@ public class NotificationFunction {
                             return Mono.just(request.createResponseBuilder(HttpStatus.INTERNAL_SERVER_ERROR).body(AzureFunctionResponsesEnum.ERROR_CONVERTING_BODY).build());
                         }
                     }
-                    return serviceBusSenderClient.sendMessages(batch);
+                    serviceBusSenderClient.sendMessages(batch).subscribe(unused -> {}, Throwable::printStackTrace);
+                    return Mono.just(request.createResponseBuilder(HttpStatus.OK).body(AzureFunctionResponsesEnum.OK).build());
                 }
                );
     }
