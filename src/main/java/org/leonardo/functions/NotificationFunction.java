@@ -64,7 +64,7 @@ public class NotificationFunction {
                 .queueName("test-queue").buildAsyncClient();
 //                .topicName("topic-notifications").buildAsyncClient();
 
-                return serviceBusSenderClient.createMessageBatch().flatMap(batch -> {
+                serviceBusSenderClient.createMessageBatch().flatMap(batch -> {
                     for (MoodleNotificationDto moodleNotificationDto : notificationList) {
                         try {
                             String json = objectWriter.writeValueAsString(moodleNotificationDto);
@@ -85,9 +85,11 @@ public class NotificationFunction {
                             return Mono.just(request.createResponseBuilder(HttpStatus.INTERNAL_SERVER_ERROR).body(AzureFunctionResponsesEnum.ERROR_CONVERTING_BODY).build());
                         }
                     }
-                    serviceBusSenderClient.sendMessages(batch).subscribe(unused -> {}, Throwable::printStackTrace);
-                    return Mono.just(request.createResponseBuilder(HttpStatus.OK).body(AzureFunctionResponsesEnum.OK).build());
+                    return serviceBusSenderClient.sendMessages(batch);
+//
                 }
-               );
+               ).subscribe(unused -> {}, Throwable::printStackTrace);
+
+        return Mono.just(request.createResponseBuilder(HttpStatus.OK).body(AzureFunctionResponsesEnum.OK).build());
     }
 }
